@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Silke</First><Last>Sperling</Last></Person>
+    <Email>silke.sperling@charite.de</Email>
+    <Phone>++49 (0)30 450540123</Phone>
+    <Laboratory>Cardiovascular Genetics</Laboratory>
+    <Department>Cardiovascular Genetics</Department>
+    <Organization>Experimental and Clinical Research Center (ECRC), Charité / MDC for Molecular Medicine</Organization>
+    <Address>
+      <Line>Lindenberger Weg 80</Line>
+      <City>Berlin</City>
+      <State>Berlin</State>
+      <Zip-Code>13125</Zip-Code>
+      <Country>Germany</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Silke</First><Middle>R</Middle><Last>Sperling</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL9052">
+    <Status database="GEO">
+      <Submission-Date>2009-08-18</Submission-Date>
+      <Release-Date>2009-08-18</Release-Date>
+      <Last-Update-Date>2019-02-21</Last-Update-Date>
+    </Status>
+    <Title>Illumina Genome Analyzer (Homo sapiens)</Title>
+    <Accession database="GEO">GPL9052</Accession>
+    <Technology>other</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="9606">Homo sapiens</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM900475">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-01_LV_mRNA</Title>
+    <Accession database="GEO">GSM900475</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>left ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, left ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131413" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839464" />
+  </Sample>
+
+  <Sample iid="GSM900476">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2014-02-04</Last-Update-Date>
+    </Status>
+    <Title>NH-02_RV_mRNA</Title>
+    <Accession database="GEO">GSM900476</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839465" />
+  </Sample>
+
+  <Sample iid="GSM900477">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-03_LV_mRNA</Title>
+    <Accession database="GEO">GSM900477</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>left ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, left ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131415" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839466" />
+  </Sample>
+
+  <Sample iid="GSM900478">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-04_RV_mRNA</Title>
+    <Accession database="GEO">GSM900478</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131416" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839467" />
+  </Sample>
+
+  <Sample iid="GSM900479">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-05_LV_mRNA</Title>
+    <Accession database="GEO">GSM900479</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>left ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, left ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131417" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839468" />
+  </Sample>
+
+  <Sample iid="GSM900480">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-06_RV_mRNA</Title>
+    <Accession database="GEO">GSM900480</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131418" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839469" />
+  </Sample>
+
+  <Sample iid="GSM900481">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-07_LV_mRNA</Title>
+    <Accession database="GEO">GSM900481</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>left ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, left ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131419" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839470" />
+  </Sample>
+
+  <Sample iid="GSM900482">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>NH-08_RV_mRNA</Title>
+    <Accession database="GEO">GSM900482</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from normal human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+healthy
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131420" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839471" />
+  </Sample>
+
+  <Sample iid="GSM900483">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-01_RV_mRNA</Title>
+    <Accession database="GEO">GSM900483</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131421" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839472" />
+  </Sample>
+
+  <Sample iid="GSM900484">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-02_RV_mRNA</Title>
+    <Accession database="GEO">GSM900484</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131422" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839473" />
+  </Sample>
+
+  <Sample iid="GSM900485">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-03_RV_mRNA</Title>
+    <Accession database="GEO">GSM900485</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131423" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839474" />
+  </Sample>
+
+  <Sample iid="GSM900486">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-04_RV_mRNA</Title>
+    <Accession database="GEO">GSM900486</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131424" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839475" />
+  </Sample>
+
+  <Sample iid="GSM900487">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-05_RV_mRNA</Title>
+    <Accession database="GEO">GSM900487</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131425" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839476" />
+  </Sample>
+
+  <Sample iid="GSM900488">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-06_RV_mRNA</Title>
+    <Accession database="GEO">GSM900488</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131426" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839477" />
+  </Sample>
+
+  <Sample iid="GSM900489">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-07_RV_mRNA</Title>
+    <Accession database="GEO">GSM900489</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131427" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839478" />
+  </Sample>
+
+  <Sample iid="GSM900490">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-08_RV_mRNA</Title>
+    <Accession database="GEO">GSM900490</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131428" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839479" />
+  </Sample>
+
+  <Sample iid="GSM900491">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-09_RV_mRNA</Title>
+    <Accession database="GEO">GSM900491</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131429" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839480" />
+  </Sample>
+
+  <Sample iid="GSM900492">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-10_RV_mRNA</Title>
+    <Accession database="GEO">GSM900492</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131430" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839481" />
+  </Sample>
+
+  <Sample iid="GSM900493">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-11_RV_mRNA</Title>
+    <Accession database="GEO">GSM900493</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131431" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839482" />
+  </Sample>
+
+  <Sample iid="GSM900494">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-12_RV_mRNA</Title>
+    <Accession database="GEO">GSM900494</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131432" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839483" />
+  </Sample>
+
+  <Sample iid="GSM900495">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-13_RV_mRNA</Title>
+    <Accession database="GEO">GSM900495</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131433" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839484" />
+  </Sample>
+
+  <Sample iid="GSM900496">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-14_RV_mRNA</Title>
+    <Accession database="GEO">GSM900496</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131434" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839485" />
+  </Sample>
+
+  <Sample iid="GSM900497">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-15_RV_mRNA</Title>
+    <Accession database="GEO">GSM900497</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131435" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839486" />
+  </Sample>
+
+  <Sample iid="GSM900498">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-16_RV_mRNA</Title>
+    <Accession database="GEO">GSM900498</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131436" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839487" />
+  </Sample>
+
+  <Sample iid="GSM900499">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-17_RV_mRNA</Title>
+    <Accession database="GEO">GSM900499</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131437" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839488" />
+  </Sample>
+
+  <Sample iid="GSM900500">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-18_RV_mRNA</Title>
+    <Accession database="GEO">GSM900500</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131438" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839489" />
+  </Sample>
+
+  <Sample iid="GSM900501">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-19_RV_mRNA</Title>
+    <Accession database="GEO">GSM900501</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131439" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839490" />
+  </Sample>
+
+  <Sample iid="GSM900502">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-20_RV_mRNA</Title>
+    <Accession database="GEO">GSM900502</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131440" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839491" />
+  </Sample>
+
+  <Sample iid="GSM900503">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-21_RV_mRNA</Title>
+    <Accession database="GEO">GSM900503</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131441" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839492" />
+  </Sample>
+
+  <Sample iid="GSM900504">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>TOF-22_RV_mRNA</Title>
+    <Accession database="GEO">GSM900504</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>right ventricle from TOF human heart</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="tissue">
+heart, right ventricle
+      </Characteristics>
+      <Characteristics tag="disease state">
+Tetralogy of Fallot (TOF)
+      </Characteristics>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Total RNA was isolated from human heart samples using TRIzol reagent. Messenger RNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+mRNA-Seq.
+    </Description>
+    <Data-Processing>
+Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0). mRNA reads were mapped to the human reference genome (NCBI v36.1; hg18) using RazerS allowing at most 10 equally-best hits and two mismatches (no InDels) per read. Multimatched reads were proportionately assigned to each of their mapping locations using MuMRescueLite software with a window size of 200 bp. Reads were assigned to genes and transcripts if their mapped location is inside of exon boundaries as defined by ENSEMBL (v54)5. To further assign unmapped reads, a gene-wise splice junction sequence library was produced from pairwise connection of exon sequences corresponding to all known 5' to 3' splice junctions (supported by the analysis of aligned EST and cDNA sequences). For transcripts, the read counts were adjusted using the proportion estimation (POEM) method in the Solas package. Read count normalization for mRNAs (genes and transcripts) was performed using the RNA composition adjustment by trimmed mean of M-values (TMM) and quantile-to-quantile count adjustment implemented in the edgeR package.
+
+Processed data files are linked to the Series record as supplementary files.
+    </Data-Processing>
+    <Platform-Ref ref="GPL9052" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina Genome Analyzer</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX131442" />
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN00839493" />
+  </Sample>
+
+  <Series iid="GSE36761">
+    <Status database="GEO">
+      <Submission-Date>2012-03-23</Submission-Date>
+      <Release-Date>2014-02-04</Release-Date>
+      <Last-Update-Date>2019-05-15</Last-Update-Date>
+    </Status>
+    <Title>mRNA expression profiling in patients with Tetralogy of Fallot and healthy unaffected individuals</Title>
+    <Accession database="GEO">GSE36761</Accession>
+    <Pubmed-ID>24459294</Pubmed-ID>
+    <Pubmed-ID>27496870</Pubmed-ID>
+    <Summary>
+Right ventricular mRNA profiles from 22 patients with Tetralogy of Fallot (TOF) and mRNA-seq profiles from the left and right ventricle (LV and RV, respectively) of 4 healthy unaffected individuals (NH) were generated. The total RNA was isolated from the 30 human heart samples using TRIzol. mRNAs were isolated from total RNA and prepared for sequencing using Illumina Kit RS-100-0801 according to the manufacturer's protocol (Preparing Samples for Sequencing of mRNA Sept 2008). The sequencing libraries were generated using a non-strand-specific library construction method. The purified DNA fragments were used directly for cluster generation, and 36 cycles of single-end read sequencing were performed using the Illumina Genome Analyzer. Sequencing reads were extracted from the image files using the open source Firecrest and Bustard applications (Illumina Genome Analyzer pipeline 1.3.2, 1.4.0 and 1.5.0).
+    </Summary>
+    <Overall-Design>
+Right ventricular mRNA-seq profiles from 22 patients with Tetralogy of Fallot and mRNA-seq profiles from the left and right ventricle of 4 healthy unaffected individuals.
+
+Supplementary processed data files:
+GSE36761_gene_expression_levels.txt: Gene expression profiling data for all samples.
+GSE36761_gene_expression_levels_normalized.txt: Normalized gene expression profiling data for all samples.
+GSE36761_transcript_expression_levels.txt: Transcript expression profiling data for all samples.
+GSE36761_transcript_expression_levels_normalized.txt: Normalized transcript expression profiling data for all samples.
+Genome build: hg18
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM900475" />
+    <Sample-Ref ref="GSM900476" />
+    <Sample-Ref ref="GSM900477" />
+    <Sample-Ref ref="GSM900478" />
+    <Sample-Ref ref="GSM900479" />
+    <Sample-Ref ref="GSM900480" />
+    <Sample-Ref ref="GSM900481" />
+    <Sample-Ref ref="GSM900482" />
+    <Sample-Ref ref="GSM900483" />
+    <Sample-Ref ref="GSM900484" />
+    <Sample-Ref ref="GSM900485" />
+    <Sample-Ref ref="GSM900486" />
+    <Sample-Ref ref="GSM900487" />
+    <Sample-Ref ref="GSM900488" />
+    <Sample-Ref ref="GSM900489" />
+    <Sample-Ref ref="GSM900490" />
+    <Sample-Ref ref="GSM900491" />
+    <Sample-Ref ref="GSM900492" />
+    <Sample-Ref ref="GSM900493" />
+    <Sample-Ref ref="GSM900494" />
+    <Sample-Ref ref="GSM900495" />
+    <Sample-Ref ref="GSM900496" />
+    <Sample-Ref ref="GSM900497" />
+    <Sample-Ref ref="GSM900498" />
+    <Sample-Ref ref="GSM900499" />
+    <Sample-Ref ref="GSM900500" />
+    <Sample-Ref ref="GSM900501" />
+    <Sample-Ref ref="GSM900502" />
+    <Sample-Ref ref="GSM900503" />
+    <Sample-Ref ref="GSM900504" />
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE36nnn/GSE36761/suppl/GSE36761_gene_expression_levels.txt.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE36nnn/GSE36761/suppl/GSE36761_gene_expression_levels_normalized.txt.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE36nnn/GSE36761/suppl/GSE36761_transcript_expression_levels.txt.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE36nnn/GSE36761/suppl/GSE36761_transcript_expression_levels_normalized.txt.gz
+    </Supplementary-Data>
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP011924" />
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA156781" />
+  </Series>
+
+</MINiML>
