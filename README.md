@@ -1,8 +1,6 @@
-## cuhk_course_genome
+## BMEG3105 Data Analytics for Personalized Genomics and Precision Medicine
 
 ---
-
-BMEG3105 Data Analytics for Personalized Genomics and Precision Medicine
 
 - Classification and Clustering of genome data 
 
