@@ -1,4 +1,4 @@
-# Genomic Data Analysis: DNA-Binding Proteins and Variant Analysis
+# Genomic Data Analysis
 
 This repository contains the bioinformatics pipeline and analysis for identifying DNA-binding protein motifs and characterizing genomic variants (SNPs) within a specific dataset. This project was completed as part of the Data Analysis in Biomedical Engineering course at The Chinese University of Hong Kong.
 
