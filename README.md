@@ -10,10 +10,10 @@ Rather than presenting the work as a packaged bioinformatics library, this repo 
 
 ## Dataset
 
-- **Source:** NCBI GEO `GSE36761`
-- **Data used in the notebook:** normalized gene expression matrix
-- **Observed matrix shape in the notebook output:** 26,521 genes x 30 samples
-- **Study context:** expression profiles from normal and disease-associated samples
+- Source: NCBI GEO `GSE36761`
+- Data used in the notebook: normalized gene expression matrix
+- Observed matrix shape in the notebook output: 26,521 genes x 30 samples
+- Study context: expression profiles from normal and disease-associated samples
 
 The raw GEO exports used in the analysis are included under [`material/`](/Users/lazy/Downloads/GitHub/Statistical_dataAnalysis_genomics/material).
 
@@ -55,18 +55,18 @@ The main analysis lives in [`BMEG3105_proj.ipynb`](/Users/lazy/Downloads/GitHub/
 
 ### Classification
 
-- **Feature pipeline:** standardization -> PCA -> XGBoost classifier
-- **Train/test split:** 80/20
-- **Classifier settings:** `n_estimators=200`, `max_depth=20`, `learning_rate=0.1`, `subsample=0.8`, `colsample_bytree=0.8`
-- **Class balancing step in notebook:** SMOTE is prepared during training
+- Feature pipeline: standardization -> PCA -> XGBoost classifier
+- Train/test split: 80/20
+- Classifier settings: `n_estimators=200`, `max_depth=20`, `learning_rate=0.1`, `subsample=0.8`, `colsample_bytree=0.8`
+- Class balancing step in notebook: SMOTE is prepared during training
 
 The classification stage is exploratory rather than a deployment-oriented prediction system. In the notebook, the target is formed by quantile-binning an expression column into three categories, then testing how well the PCA-reduced feature space separates those bins.
 
 ### Clustering
 
-- **Dimensionality reduction:** PCA with 15 components for the clustering stage
-- **Clustering:** K-means with `n_clusters=3`
-- **Cluster quality metric:** silhouette score
+- Dimensionality reduction: PCA with 15 components for the clustering stage
+- Clustering: K-means with `n_clusters=3`
+- Cluster quality metric: silhouette score
 
 ## Results
 
@@ -74,10 +74,10 @@ The classification stage is exploratory rather than a deployment-oriented predic
 
 The classification experiment is the main supervised result in the notebook. The saved output reports:
 
-- **Accuracy:** `0.9191`
-- **Precision:** `0.9190`
-- **Recall:** `0.9191`
-- **F1 score:** `0.9190`
+- Accuracy: `0.9191`
+- Precision: `0.9190`
+- Recall: `0.9191`
+- F1 score: `0.9190`
 
 Per-class metrics in the saved notebook output are consistently close to `0.88-0.94`, suggesting that the PCA-reduced feature space separates the derived label groups reasonably well within this setup.
 
@@ -87,7 +87,7 @@ The PCA variance curve shows that most of the variance is captured within the ea
 
 ### Clustering
 
-- **Silhouette score:** `0.9974`
+- Silhouette score: `0.9974`
 
 The clustering stage is the strongest unsupervised signal in the project. A silhouette score this high indicates extremely strong separation for the three clusters produced in the PCA-transformed space used by the notebook.
 
